@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Crypto</title>
+  <meta name="description">
+  <meta name="author">
+  <link href="css/sidebar.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+</head>
+
+<body>
+  <div class="sidenav" id="lateral-bar">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+  <div class="main">
+     <div>Prix achat : <span id="buyPrice"></span></div>
+     <div>Prix vente : <span id="sellPrice"></span></div>
+     <span>
+       Crypto prix 0 - 100 :  <canvas id='graphiquePrice0-100' width="10" height="400"></canvas>
+    </span>
+    <span>
+      Crypto prix 100 - 500 :  <canvas id='graphiquePrice100-500' width="10" height="400"></canvas>
+     </span>
+     <div>
+       Légende : <span id="legend"></span>
+     </div>
+  </div>
+</body>
+
+</html>

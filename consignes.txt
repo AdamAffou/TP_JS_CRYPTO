@@ -1,0 +1,34 @@
+INSTALLER NODE JS !
+
+TP : Afficher le prix réel de toutes les cryptos proposées par la plateforme d'échange Kraken et les classer les unes par rapport aux autres.
+
+Pré-requis installer et lancer le serveur : 
+    - cd <director TP>/backend/
+    - npm i
+    - node index.js
+
+1 - Récupérer toutes les crypto disponibles via GET sur http://localhost:3000/0/public/Assets
+    Mettre à disposition dans la barre latérale gauche
+2 - Sur le clique d'une crypto : 
+    -Tester Si la pair crypto / Euro existe via GET sur  http://localhost:3000/0/public/AssetPairs
+    -Si elle n'existe pas disable le clique sur la crypto et la mettre en rouge
+    -Si la pair existe, récupérer le prix d'achat / de vente via POST sur http://localhost:3000/0/public/Ticker (paramètre post : { pair: nomCrypto+'EUR' })
+3 - Afficher le prix récupéré dans la page
+4 - Afficher un graphique du prix d'achat via l'élément canvas
+    - Il y a à votre disposition deux canvas :
+        -Un si le prix de la crypto est entre 0 - 100
+        -Un autre si le prix de la crypto est entre 100 - 500
+        -(si le prix excède 500, ne rien faire)
+    - Un petit carré d'une couleur random doit être affiché dans la limite du canvas 
+    /!\ Les canvas ne font pas la taille du prix maximale de la crypto, à vous donc, de les adapter.
+5 - Afficher en dessous le nom de la crypto avec sa couleur pour légende
+
+NOTATION : 
+-12 PTS sur les fonctionnalités
+-4 PTS sur Architecture / Lisibilité du code
+-2 PTS sur les commentaires
+-2 PTS pour fonctionnalités supplémentaires
+
+PROF : 
+-80 Lignes de codes
+-2h30 de temps passé dessus (Conception / Création)
